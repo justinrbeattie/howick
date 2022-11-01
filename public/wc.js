@@ -1,4 +1,4 @@
-class HTMLDetailsElementExtended extends HTMLDetailsElement {
+class HTMLDetailsElementExtended extends HTMLElement {
     resizeObserver;
     constructor() {
       super();
@@ -56,7 +56,7 @@ class HTMLDetailsElementExtended extends HTMLDetailsElement {
       });
     };
   }
-  customElements.define("details-extended",HTMLDetailsElement, {
+  customElements.define("details-extended", HTMLDetailsElementExtended, {
     extends: "details",
   });
   
