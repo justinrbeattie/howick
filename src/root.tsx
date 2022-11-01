@@ -26,7 +26,7 @@ export default component$(() => {
       <body lang="en">
         <RouterOutlet />
         <ServiceWorkerRegister />
-        <script async type="text/partytown" src="./wc.js" ></script>
+        <script  src="./wc.js" ></script>
       </body>
     </QwikCity>
   );
