@@ -18,7 +18,7 @@ export default component$(() => {
     <QwikCity>
       <head>
         <meta charSet="utf-8" />
-        <QwikPartytown forward={["dataLayer.push"]} />;
+        <QwikPartytown />
         <script type="text/partytown" async src="https://cdn.builder.io/js/webcomponents"></script>
         <link rel="manifest" href="/manifest.json" />
         <RouterHead />
