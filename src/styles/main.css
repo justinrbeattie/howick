@@ -6,3 +6,4 @@
 @import "open-props/postcss/buttons";
 @import "./media-queries.css";
 @import "./page-grid.css";
+@import "./accordion/accordion.css";
