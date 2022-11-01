@@ -72,11 +72,11 @@ body [is="bottom-drawer"] {
   transition: --bottom-drawer-bottom-offset 0.5s ease-in-out;
 }
 
-body [is="bottom-drawer"][layer="3"] {
+body [is="bottom-drawer"][data-layer="3"] {
   z-index: 3;
 }
 
-body [is="bottom-drawer"][layer="2"] {
+body [is="bottom-drawer"][data-layer="2"] {
   z-index: 2;
   --bottom-drawer-total-intersection-ratio:var(--bottom-drawer-3-intersection-ratio);
   --bottom-drawer-translate-z: calc(var(--bottom-drawer-total-intersection-ratio) * -150px );
@@ -84,7 +84,7 @@ body [is="bottom-drawer"][layer="2"] {
 }
 
 
-body [is="bottom-drawer"][layer="1"] {
+body [is="bottom-drawer"][data-layer="1"] {
   z-index: 1;
   --bottom-drawer-total-intersection-ratio:calc(var(--bottom-drawer-3-intersection-ratio) + var(--bottom-drawer-2-intersection-ratio) / 2);
   --bottom-drawer-translate-z: calc(var(--bottom-drawer-total-intersection-ratio) * -150px );
@@ -101,7 +101,7 @@ body [is="bottom-drawer"] ~ div {
 }
 
 
-body [is="bottom-drawer"]:not([open]) > [placeholder] {
+body [is="bottom-drawer"]:not([open]) > [data-placeholder] {
   min-height:100vh;
 }
 
@@ -112,20 +112,20 @@ body [is="bottom-drawer"][disabled] {
 
 /* Drawer Placeholder */
 
-body [is="bottom-drawer"] > [placeholder] {
+body [is="bottom-drawer"] > [data-placeholder] {
   min-height: calc(100vh - (var(--bottom-nav-height) + var(--bottom-drawer-header-height)));
   pointer-events: none;
   scroll-snap-align: start;
   transition: min-height 0.5s ease-in-out;
 }
 
-body [is="bottom-drawer"][expanded] > [placeholder] {
+body [is="bottom-drawer"][expanded] > [data-placeholder] {
   pointer-events: all;
 }
 
 /* Drawer Content */
 
-body [is="bottom-drawer"] > [content] {
+body [is="bottom-drawer"] > [data-content] {
   display: flex;
   flex-direction: column;
   gap: 1px;
@@ -141,14 +141,14 @@ body [is="bottom-drawer"] > [content] {
 
 }
 
-body [is="bottom-drawer"] > [content] > header {
+body [is="bottom-drawer"] > [data-content] > header {
   width: var(--page-width);
   min-height: var(--bottom-drawer-header-height);
   background:var(--surface-1);
 
 }
 
-body [is="bottom-drawer"] > [content] > main {
+body [is="bottom-drawer"] > [data-content] > main {
   display:flex!important;
   width: var(--page-width);
   background:var(--surface-1);
@@ -156,7 +156,7 @@ body [is="bottom-drawer"] > [content] > main {
   content-visibility: hidden;
 }
 
-body [is="bottom-drawer"][expanded] > [content] > main {
+body [is="bottom-drawer"][expanded] > [data-content] > main {
   content-visibility: auto;
 }
 

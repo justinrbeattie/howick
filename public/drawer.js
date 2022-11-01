@@ -99,7 +99,7 @@ class BottomDrawer extends HTMLDialogElement {
       }
       const ratio = Math.round(entry.intersectionRatio * 1000) / 1000;
       document.body.style.setProperty(
-        "--bottom-drawer-" + this.getAttribute("layer") + "-intersection-ratio",
+        "--bottom-drawer-" + this.getAttribute("data-layer") + "-intersection-ratio",
         ratio
       );
 

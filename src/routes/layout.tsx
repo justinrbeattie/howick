@@ -7,37 +7,31 @@ export default component$(() => {
 
       <Header />
 
-      <dialog id="bottom-drawer-layer-3" open layer="3" is="bottom-drawer">
+      <dialog id="bottom-drawer-layer-3" open data-layer="3" is="bottom-drawer">
         <div
-          inert
-          placeholder
-          onclick="this.parentElement.collapseDrawer()"
+          data-placeholder
         ></div>
-        <div content onclick="this.parentElement.expandDrawer()">
+        <div data-content>
           <header>Three</header>
           <main hidden>fskdsfhk dsfjgfdsagjhdf</main>
         </div>
       </dialog>
 
-      <dialog id="bottom-drawer-layer-2" open layer="2" is="bottom-drawer">
+      <dialog id="bottom-drawer-layer-2" open data-layer="2" is="bottom-drawer">
         <div
-          inert
-          placeholder
-          onclick="this.parentElement.collapseDrawer()"
+          data-placeholder
         ></div>
-        <div content onclick="this.parentElement.expandDrawer()">
+        <div data-content>
           <header>TWO</header>
           <main hidden>fskdsfhk dsfjgfdsagjhdf</main>
         </div>
       </dialog>
 
-      <dialog id="bottom-drawer-layer-1" open layer="1" is="bottom-drawer">
+      <dialog id="bottom-drawer-layer-1" open data-layer="1" is="bottom-drawer">
         <div
-          inert
-          placeholder
-          onclick="this.parentElement.collapseDrawer()"
+          data-placeholder
         ></div>
-        <div content onclick="this.parentElement.expandDrawer()">
+        <div data-content>
           <header>ONE</header>
           <main hidden>fskdsfhk dsfjgfdsagjhdf</main>
         </div>
