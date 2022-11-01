@@ -1,4 +1,3 @@
-console.log('xxx');
 class HTMLDetailsElementExtended extends HTMLDetailsElement {
     resizeObserver;
     constructor() {
