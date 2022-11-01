@@ -21,11 +21,11 @@ export default component$(() => {
         <QwikPartytown forward={["dataLayer.push"]} />;
         <link rel="manifest" href="/manifest.json" />
         <RouterHead />
+        <script async src="https://cdn.builder.io/js/webcomponents"></script>
       </head>
       <body lang="en">
         <RouterOutlet />
         <ServiceWorkerRegister />
-        <script async src="https://cdn.builder.io/js/webcomponents"></script>
       </body>
     </QwikCity>
   );
