@@ -8,3 +8,8 @@ function = "entry.netlify-edge"
 
 [dev]
 framework = "#static"
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
