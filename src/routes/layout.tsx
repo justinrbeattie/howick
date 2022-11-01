@@ -4,12 +4,11 @@ import Header from '../components/header/header';
 export default component$(() => {
   return (
     <>
-      <main>
-        <Header />
-        <section>
-          <Slot />
-        </section>
-      </main>
+
+  <Header />
+      <div>
+      <Slot />
+      </div>
       <footer>
         <a href="https://www.builder.io/" target="_blank">
           Made with ♡ by Builder.io

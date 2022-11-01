@@ -28,7 +28,6 @@
   
   details[open] {
     box-shadow: var(--shadow-4);
-    height: var(--accordion-expanded-height);
     margin-bottom: var(--size-3);
   }
 
