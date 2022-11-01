@@ -56,7 +56,7 @@ class HTMLDetailsElementExtended extends HTMLDetailsElement {
       });
     };
   }
-  customElements.define("details-extended", HTMLDetailsElementExtended, {
+  customElements.define("details-extended",HTMLDetailsElement, {
     extends: "details",
   });
   
