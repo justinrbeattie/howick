@@ -39,6 +39,11 @@
     "vite-tsconfig-paths": "3.5.0"
   },
   "dependencies": {
-    "@builder.io/sdk-qwik": "^0.0.34"
+    "@builder.io/sdk-qwik": "^0.0.34",
+    "open-props": "^1.4.16",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^15.0.0",
+    "postcss-nested": "^5.0.6",
+    "postcss-preset-env": "^7.8.2"
   }
 }

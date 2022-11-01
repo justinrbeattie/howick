@@ -1,0 +1,114 @@
+:root {
+  --page-grid-gutter-y:1vh;
+  --page-grid-gutter-x:12.5vw;
+  --page-grid-gap: 0.5rem;
+  --page-grid-template-columns: [left-gutter] var(--page-grid-gutter-x) [col] 1fr [col] 1fr [col] 1fr [col] 1fr [col] 1fr [col] 1fr [col] 1fr [col] 1fr [col] 1fr [col] 1fr [col] 1fr [col] 1fr [right-gutter] var(--page-grid-gutter-x);
+  --page-grid--template-rows: [top-gutter] var(--page-grid-gutter-y) repeat(var(--page-grid-rows, 5), [row] minmax(70px, calc(10vh - var(--page-grid-gap)))) [bottom-gutter]  var(--page-grid-gutter-y);
+}
+
+
+
+section {
+  display: grid;
+  position: relative;
+  grid-template-columns: var(--page-grid-template-columns);
+  grid-template-rows:var(--page-grid--template-rows);
+  gap: var(--page-grid-gap);
+  padding: calc(var(--page-grid-gap) / 2) 0;
+  width: 100vw;
+}
+
+section:before {
+  content: "";
+  grid-column: col 1 / span 12;
+  grid-row: row 1 / -2;
+  border:dashed var(--border-size-1) gray;
+}
+
+section:after {
+  content: "";
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  border:dashed var(--border-size-1) gray;
+}
+
+content {
+  grid-column: var(--content-column);
+  grid-row: var(--content-row);
+  background: orange;
+}
+
+.text-content {
+  padding: 1rem;
+  background: var(--size-xxs);
+}
+
+@media (--xxs-n-above) {
+  section {
+    --page-grid-rows: var(--section-rows-xxs);
+  }
+
+  content {
+    --content-column: var(--xxs-column);
+  }
+}
+
+@media (--xs-n-above) {
+  section {
+    --page-grid-rows: var(--section-rows-xs);
+  }
+
+  content {
+    --content-column: var(--xs-column);
+  }
+}
+
+@media (--sm-n-above) {
+  section {
+    --page-grid-rows: var(--section-rows-sm);
+  }
+
+  content {
+    --content-column: var(--sm-column);
+  }
+}
+
+@media (--md-n-above) {
+  section {
+    --page-grid-rows: var(--section-rows-md);
+  }
+
+  content {
+    --content-column: var(--md-column);
+  }
+}
+
+@media (--lg-n-above) {
+  section {
+    --page-grid-rows: var(--section-rows-lg);
+  }
+
+  content {
+    --content-column: var(--lg-column);
+  }
+}
+
+@media (--xl-n-above) {
+  section {
+    --page-grid-rows: var(--section-rows-xl);
+  }
+
+  content {
+    --content-column: var(--xl-column);
+  }
+}
+
+@media (--xxl-n-above) {
+  section {
+    --page-grid-rows: var(--section-rows-xxl);
+  }
+
+  content {
+    --content-column: var(--xxl-column);
+  }
+}
