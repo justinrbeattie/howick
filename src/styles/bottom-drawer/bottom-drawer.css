@@ -1,6 +1,5 @@
 
 
-
 body [is="bottom-drawer"] {
   --bottom-drawer-nav-height-offset:calc(var(--top-nav-height) + var(--bottom-nav-height));
   --bottom-drawer-top-offset: calc(var(--page-height) - (var(--bottom-drawer-bottom-offset) + var(--bottom-nav-height)));
@@ -71,11 +70,11 @@ body [is="bottom-drawer"] {
   transition: --bottom-drawer-bottom-offset 0.5s ease-in-out;
 }
 
-body [is="bottom-drawer"][layer="3"] {
+body [is="bottom-drawer"][data-layer="3"] {
   z-index: 3;
 }
 
-body [is="bottom-drawer"][layer="2"] {
+body [is="bottom-drawer"][data-layer="2"] {
   z-index: 2;
   --bottom-drawer-total-intersection-ratio:var(--bottom-drawer-3-intersection-ratio);
   --bottom-drawer-translate-z: calc(var(--bottom-drawer-total-intersection-ratio) * -150px );
@@ -83,7 +82,7 @@ body [is="bottom-drawer"][layer="2"] {
 }
 
 
-body [is="bottom-drawer"][layer="1"] {
+body [is="bottom-drawer"][data-layer="1"] {
   z-index: 1;
   --bottom-drawer-total-intersection-ratio:calc(var(--bottom-drawer-3-intersection-ratio) + var(--bottom-drawer-2-intersection-ratio) / 2);
   --bottom-drawer-translate-z: calc(var(--bottom-drawer-total-intersection-ratio) * -150px );
