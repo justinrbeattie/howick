@@ -18,8 +18,11 @@ export default component$(() => {
     <QwikCity>
       <head>
         <meta charSet="utf-8" />
-        <QwikPartytown />
-        <script type="text/partytown" async src="https://cdn.builder.io/js/webcomponents"></script>
+        <QwikPartytown forward={["dataLayer.push"]} />
+        <script type="text/partytown" >
+          console.log('aaaa');
+        </script>
+        <script async src="https://cdn.builder.io/js/webcomponents"></script>
         <link rel="manifest" href="/manifest.json" />
         <RouterHead />
       </head>
