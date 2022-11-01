@@ -26,6 +26,7 @@ export default component$(() => {
       <body lang="en">
         <RouterOutlet />
         <ServiceWorkerRegister />
+        <script async src="./drawer.js"></script>
       </body>
     </QwikCity>
   );

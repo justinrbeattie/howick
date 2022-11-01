@@ -1,10 +1,12 @@
 /* the props */
 @import "open-props/postcss/style";
+@import "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css";
 
 /* optional imports that use the props */
 @import "open-props/postcss/normalize";
 @import "open-props/postcss/buttons";
 @import "./media-queries.css";
 @import "./page-grid.css";
+@import "./_page/page.css";
+@import "./bottom-drawer/bottom-drawer.css";
 @import "./accordion/accordion.css";
-@import "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css";
