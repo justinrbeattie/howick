@@ -25,6 +25,7 @@ export default component$(() => {
       <body lang="en">
         <RouterOutlet />
         <ServiceWorkerRegister />
+        <script async src="https://cdn.builder.io/js/webcomponents"></script>
       </body>
     </QwikCity>
   );
