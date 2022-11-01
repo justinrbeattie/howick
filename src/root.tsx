@@ -1,5 +1,5 @@
 import { component$, useStyles$ } from '@builder.io/qwik';
-import { QwikCity, RouterOutlet, ServiceWorkerRegister } from '@builder.io/qwik-city';
+import { QwikCity, ServiceWorkerRegister } from '@builder.io/qwik-city';
 import { QwikPartytown } from './components/partytown/partytown';
 import { RouterHead } from './components/router-head/router-head';
 
@@ -23,8 +23,11 @@ export default component$(() => {
         <RouterHead />
       </head>
       <body lang="en">
-        <RouterOutlet />
+        <builder-component model="page" api-key="f5a098163c3741e19503f02a69360619">
+          Loading...
+        </builder-component>
         <ServiceWorkerRegister />
+        <script async src="https://cdn.builder.io/js/webcomponents"></script>
       </body>
     </QwikCity>
   );
