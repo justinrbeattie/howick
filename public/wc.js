@@ -1,4 +1,4 @@
-class HTMLDetailsElementExtended extends HTMLElement {
+class HTMLDetailsElementExtended extends HTMLDivElement {
     resizeObserver;
     constructor() {
       super();
