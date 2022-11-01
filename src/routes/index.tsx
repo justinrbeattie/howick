@@ -3,7 +3,7 @@ import type { DocumentHead } from '@builder.io/qwik-city';
 
 export default component$(() => {
   return (
-    <div style="width:100%;">
+    <div style="width:100vw;">
       <builder-component model="page" api-key="f5a098163c3741e19503f02a69360619">
         Loading...
       </builder-component>
