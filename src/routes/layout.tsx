@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { component$, Slot } from '@builder.io/qwik';
 import Header from '../components/header/header';
 
@@ -7,7 +8,7 @@ export default component$(() => {
 
       <Header />
 
-      <dialog id="bottom-drawer-layer-3" open data-layer="3" is="bottom-drawer">
+      <dialog id="bottom-drawer-layer-3" open inert data-layer="3" is="bottom-drawer">
         <div
           data-placeholder
         ></div>
@@ -17,7 +18,7 @@ export default component$(() => {
         </div>
       </dialog>
 
-      <dialog id="bottom-drawer-layer-2" open data-layer="2" is="bottom-drawer">
+      <dialog id="bottom-drawer-layer-2" open inert data-layer="2" is="bottom-drawer">
         <div
           data-placeholder
         ></div>
@@ -27,7 +28,7 @@ export default component$(() => {
         </div>
       </dialog>
 
-      <dialog id="bottom-drawer-layer-1" open data-layer="1" is="bottom-drawer">
+      <dialog id="bottom-drawer-layer-1" open inert data-layer="1" is="bottom-drawer">
         <div
           data-placeholder
         ></div>
