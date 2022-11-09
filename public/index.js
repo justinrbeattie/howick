@@ -1,4 +1,7 @@
 export const webComponentsInit = () => {
+
+    window.scrollY = 80;
+
   const documentHeight = () => {
     document.body.style.setProperty("--page-height", `${window.innerHeight}px`);
   };
@@ -211,6 +214,7 @@ export const webComponentsInit = () => {
     };
 
     setStyles() {
+        window.scrollY = 80;
       document.body.style.setProperty(
         "--side-nav-layer-depth-ratio",
         this.ratio
