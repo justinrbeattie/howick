@@ -1,55 +1,88 @@
 // @ts-nocheck
 import { component$, Slot } from '@builder.io/qwik';
-import Header from '../components/header/header';
+
 
 export default component$(() => {
   return (
     <>
 
-      <Header />
+<header onclick="this.nextElementSibling.toggleNav()"></header>
 
-      <dialog id="bottom-drawer-layer-3" open data-layer="3" is="bottom-drawer">
-      <div
-        inert
-        placeholder
-        onclick="this.parentElement.collapseDrawer()"
-      ></div>
-      <div content onclick="this.parentElement.expandDrawer()">
-        <header>Three</header>
-        <main hidden>fskdsfhk dsfjgfdsagjhdf</main>
+{/*       <div side-nav is="side-nav">
+        <aside></aside>
+        <div placeholder></div>
       </div>
-    </dialog>
-
-    <dialog id="bottom-drawer-layer-2" open data-layer="2" is="bottom-drawer">
-      <div
-        inert
-        placeholder
-        onclick="this.parentElement.collapseDrawer()"
-      ></div>
-      <div content onclick="this.parentElement.expandDrawer()">
-        <header>TWO</header>
-        <main hidden>fskdsfhk dsfjgfdsagjhdf</main>
-      </div>
-    </dialog>
-
-    <dialog id="bottom-drawer-layer-1" open data-layer="1" is="bottom-drawer">
-      <div
-        inert
-        placeholder
-        onclick="this.parentElement.collapseDrawer()"
-      ></div>
-      <div content onclick="this.parentElement.expandDrawer()">
-        <header>ONE</header>
-        <main hidden>fskdsfhk dsfjgfdsagjhdf</main>
-      </div>
-    </dialog>
-
-      <div>
+ */}
+      <div content layer="0">
         <main>
           <Slot />
         </main>
         <footer>aa</footer>
       </div>
+
+      <bottom-drawer open layer="1" >
+        <div inert placeholder></div>
+        <div content>
+          <header>
+            <div>
+              <span>One</span>
+              <button onclick="this.closest('bottom-drawer').toggleDrawerPosition()">
+                <i class="las la-angle-up"></i>
+              </button>
+              <button
+                aria-label="Close"
+                onclick="this.closest('bottom-drawer').toggleDrawerVisibility()"
+              >
+                <i class="las la-times"></i>
+              </button>
+            </div>
+          </header>
+          <main hidden>fskdsfhk dsfjgfdsagjhdf</main>
+        </div>
+      </bottom-drawer>
+
+      <bottom-drawer open layer="2" >
+        <div inert placeholder></div>
+        <div content>
+          <header>
+            <div>
+              <span>Two</span>
+              <button onclick="this.closest('bottom-drawer').toggleDrawerPosition()">
+                <i class="las la-angle-up"></i>
+              </button>
+              <button
+                aria-label="Close"
+                onclick="this.closest('bottom-drawer').toggleDrawerVisibility()"
+              >
+                <i class="las la-times"></i>
+              </button>
+            </div>
+          </header>
+          <main hidden>fskdsfhk dsfjgfdsagjhdf</main>
+        </div>
+      </bottom-drawer>
+
+      <bottom-drawer open layer="3" >
+        <div inert placeholder></div>
+        <div content>
+          <header>
+            <div>
+              <span>Three</span>
+              <button onclick="this.closest('bottom-drawer').toggleDrawerPosition()">
+                <i class="las la-angle-up"></i>
+              </button>
+              <button
+                aria-label="Close"
+                onclick="this.closest('bottom-drawer').toggleDrawerVisibility()"
+              >
+                <i class="las la-times"></i>
+              </button>
+            </div>
+          </header>
+          <main hidden>fskdsfhk dsfjgfdsagjhdf</main>
+        </div>
+      </bottom-drawer>
+
       <footer>
         <a href="https://www.builder.io/" target="_blank">
           Made with ♡ by Builder.io

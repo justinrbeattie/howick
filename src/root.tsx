@@ -23,10 +23,10 @@ export default component$(() => {
         <link rel="manifest" href="/manifest.json" />
         <RouterHead />
       </head>
-      <body lang="en">
+      <body lang="en" style="--side-nav-layer-depth-ratio:0;">
         <RouterOutlet />
         <ServiceWorkerRegister />
-        <script async src="./drawer.js"></script>
+        <script src="./index.js"></script>
       </body>
     </QwikCity>
   );

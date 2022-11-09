@@ -1,0 +1,91 @@
+
+body:not([style="--side-nav-layer-depth-ratio:0;"]) {
+  perspective: 1000px;
+  perspective-origin: center;
+}
+
+body:not([style="--side-nav-layer-depth-ratio:0;"]) > :not([side-nav]) {
+  --side-nav-edge-offset:0;
+  opacity: calc(1 - (var(--side-nav-layer-depth-ratio) * .5));
+  overflow:hidden;
+  pointer-events:none;
+  transform-origin:center center;
+  transform: translateY(var(--side-nav-edge-offset)) rotateY(calc(var(--side-nav-layer-depth-ratio) * -15deg)) scale(calc(1 - (var(--side-nav-layer-depth-ratio) * .25)));
+}
+
+body:not([style="--side-nav-layer-depth-ratio:0;"]) > :not([side-nav]) * {
+  overflow:hidden;
+  pointer-events:none;
+  filter:blur(1px);
+  transition: filter 0.25s ease-in-out;
+}
+
+body:not([style="--side-nav-layer-depth-ratio:0;"]) > [content] {
+  border-radius:calc(var(--radius-4) * var(--side-nav-layer-depth-ratio));
+}
+
+
+body:not([style="--side-nav-layer-depth-ratio:0;"]) > :not([side-nav]):is(header) {
+  --side-nav-edge-offset: calc(var(--side-nav-layer-depth-ratio) * -200%);
+  border-radius:0;
+  opacity: calc(1 - (var(--side-nav-layer-depth-ratio) * 1));
+}
+
+body:not([style="--side-nav-layer-depth-ratio:0;"]) > :not([side-nav]):is(footer) {
+  --side-nav-edge-offset: calc(var(--side-nav-layer-depth-ratio) * 200%);
+  border-radius:0;
+  opacity: calc(1 - (var(--side-nav-layer-depth-ratio) * 1));
+}
+
+body:not([style="--side-nav-layer-depth-ratio:0;"]) > [layer][style*="--bottom-drawer-layer-depth-ratio:0."] {
+  --bottom-drawer-layer-depth-ratio:0!important;
+}
+
+
+
+
+body [side-nav] {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-snap-stop: always;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body [side-nav]::-webkit-scrollbar{
+  display: none;
+}
+
+body [side-nav] aside {
+  display: flex;
+  justify-content: flex-start;
+  min-width:max(250px ,45vw);
+  width: 45vw;
+  height: 100%;
+  background: rgba(0,0,0,0);
+  position: relative;
+  z-index: var(--layer-5);
+  scroll-snap-align: start;
+  transition: all 0.25s ease-in-out;
+}
+
+
+body [side-nav][open] aside {
+  background: rgba(0,0,0,0.5);
+}
+
+body [side-nav] [placeholder] {
+  min-width: 100vw;
+  min-height: 100%;
+  pointer-events: none;
+  scroll-snap-align: end;
+}
+
+body [side-nav][open] [placeholder] {
+  pointer-events: auto;
+}

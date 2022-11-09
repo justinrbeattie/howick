@@ -1,9 +1,9 @@
-:root {
+
+  body {
     --page-width: 100vw;
     --page-height: 100vh;
     --top-nav-height: 64px;
     --bottom-nav-height: 64px;
-    --bottom-drawer-header-height: 48px;
   }
 
   html {
@@ -15,7 +15,7 @@
   body {
     display: grid;
     overflow: hidden;
-    background: black;
+    background-image: var(--gradient-1);
     width: var(--page-width);
     height: var(--page-height);
     grid-template-columns: 1fr;
@@ -30,15 +30,15 @@
       "footer";
     margin: 0;
     position:relative;
-    perspective: 1000px;
-    perspective-origin: top;
   }
 
-  body > div {
-    overflow-y:scroll;
+  body > [content] {
+    overflow-y:auto;
     grid-area: content;
     display:flex;
     flex-direction:column;
+    perspective: 1000px;
+    perspective-origin: top;
   }
 
 
@@ -48,9 +48,9 @@
     position:sticky;
     width:100vw;
     z-index:var(--layer-4);
-    background:var(--surface-1);
+    background:var(--surface-0);
     box-shadow:var(--shadow-2);
-    border-bottom: 1px solid var(--surface-4);
+    border-bottom: 1px solid var(--surface-3);
   }
 
   body > footer {
@@ -59,26 +59,37 @@
     position:sticky;
     width:100vw;
     z-index:var(--layer-4);
-    background:var(--surface-1);
+    background:var(--surface-0);
     box-shadow:var(--shadow-2);
-    border-top: 1px solid var(--surface-4);
+    border-top: 1px solid var(--surface-3);
   }
 
 
   /* Content */
 
-  body > div > main {
+  body > [content] > main {
     display: flex;
     flex-direction: column;
-    background:var(--surface-2);
+    background:var(--surface-1);
     min-height: 200vh;
     position: relative;
   }
 
-  body > div > footer {
+  body > [content] > footer {
     background:var(--surface-3);
     min-height: 400px;
     position: relative;
     padding-bottom: calc(var(--bottom-drawer-bottom-offset) + var( --bottom-drawer-header-height));
+  }
+
+  /* button */
+
+  button:has(i:only-child) {
+    width:var(--size-6);
+    height:var(--size-6);
+    padding:0;
+    border-radius:var(--radius-round);
+    border:unset;
+    box-shadow:unset;
   }
 

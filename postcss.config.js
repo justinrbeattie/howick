@@ -6,5 +6,6 @@ module.exports = {
         }),
         require('postcss-nested'),
         require('autoprefixer'),
+        require('css-has-pseudo')
     ],
 };
