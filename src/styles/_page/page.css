@@ -7,7 +7,7 @@
   }
 
   html {
-    overflow: hidden;
+    overflow: auto;
     width: var(--page-width);
     height: var(--page-height);
   }
@@ -18,6 +18,7 @@
     background-image: var(--gradient-1);
     width: var(--page-width);
     height: var(--page-height);
+    margin-top:80px;
     grid-template-columns: 1fr;
     grid-template-rows:
       var(--top-nav-height) calc(
