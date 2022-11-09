@@ -20,18 +20,18 @@ export default component$(() => {
         <footer>aa</footer>
       </div>
 
-      <bottom-drawer open layer="1" >
+      <dialog open layer="1" is="bottom-drawer">
         <div inert placeholder></div>
         <div content>
           <header>
             <div>
               <span>One</span>
-              <button onclick="this.closest('bottom-drawer').toggleDrawerPosition()">
+              <button onclick="this.closest('dialog').toggleDrawerPosition()">
                 <i class="las la-angle-up"></i>
               </button>
               <button
                 aria-label="Close"
-                onclick="this.closest('bottom-drawer').toggleDrawerVisibility()"
+                onclick="this.closest('dialog').toggleDrawerVisibility()"
               >
                 <i class="las la-times"></i>
               </button>
@@ -39,20 +39,20 @@ export default component$(() => {
           </header>
           <main hidden>fskdsfhk dsfjgfdsagjhdf</main>
         </div>
-      </bottom-drawer>
+      </dialog>
 
-      <bottom-drawer open layer="2" >
+      <dialog open layer="2" is="bottom-drawer">
         <div inert placeholder></div>
         <div content>
           <header>
             <div>
               <span>Two</span>
-              <button onclick="this.closest('bottom-drawer').toggleDrawerPosition()">
+              <button onclick="this.closest('dialog').toggleDrawerPosition()">
                 <i class="las la-angle-up"></i>
               </button>
               <button
                 aria-label="Close"
-                onclick="this.closest('bottom-drawer').toggleDrawerVisibility()"
+                onclick="this.closest('dialog').toggleDrawerVisibility()"
               >
                 <i class="las la-times"></i>
               </button>
@@ -60,20 +60,20 @@ export default component$(() => {
           </header>
           <main hidden>fskdsfhk dsfjgfdsagjhdf</main>
         </div>
-      </bottom-drawer>
+      </dialog>
 
-      <bottom-drawer open layer="3" >
+      <dialog open layer="3" is="bottom-drawer">
         <div inert placeholder></div>
         <div content>
           <header>
             <div>
               <span>Three</span>
-              <button onclick="this.closest('bottom-drawer').toggleDrawerPosition()">
+              <button onclick="this.closest('dialog').toggleDrawerPosition()">
                 <i class="las la-angle-up"></i>
               </button>
               <button
                 aria-label="Close"
-                onclick="this.closest('bottom-drawer').toggleDrawerVisibility()"
+                onclick="this.closest('dialog').toggleDrawerVisibility()"
               >
                 <i class="las la-times"></i>
               </button>
@@ -81,7 +81,7 @@ export default component$(() => {
           </header>
           <main hidden>fskdsfhk dsfjgfdsagjhdf</main>
         </div>
-      </bottom-drawer>
+      </dialog>
 
       <footer>
         <a href="https://www.builder.io/" target="_blank">

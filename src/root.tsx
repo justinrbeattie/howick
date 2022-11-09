@@ -22,11 +22,13 @@ export default component$(() => {
         <script async src="https://cdn.builder.io/js/webcomponents"></script>
         <link rel="manifest" href="/manifest.json" />
         <RouterHead />
+        <script src="//unpkg.com/@ungap/custom-elements/es.js"></script>
       </head>
       <body lang="en" style="--side-nav-layer-depth-ratio:0;">
         <RouterOutlet />
         <ServiceWorkerRegister />
         <script src="./index.js"></script>
+        <script src="//unpkg.com/@ungap/custom-elements"></script>
       </body>
     </QwikCity>
   );

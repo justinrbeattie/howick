@@ -16,7 +16,7 @@ window.setDeferral = (callback, duration) => {
   });
 };
 
-class BottomDrawer extends HTMLElement {
+class BottomDrawer  extends HTMLDialogElement {
   intersectionObserver;
   ratio = 0;
   drawerLayers = this.parentElement.querySelectorAll("[layer]");
@@ -142,7 +142,8 @@ class BottomDrawer extends HTMLElement {
     element.removeAttribute("inert");
   }
 }
-customElements.define("bottom-drawer", BottomDrawer);
+customElements.define("bottom-drawer", BottomDrawer, { extends: "dialog" });
+
 
 class SideNav extends  HTMLElement {
   intersectionObserver;
