@@ -8,11 +8,11 @@ export default component$(() => {
 
 <header onclick="this.nextElementSibling.toggleNav()"></header>
 
-{/*       <div side-nav is="side-nav">
+      <side-nav side-nav>
         <aside></aside>
         <div placeholder></div>
-      </div>
- */}
+      </side-nav>
+ 
       <div content layer="0">
         <main>
           <Slot />

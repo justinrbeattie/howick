@@ -1,10 +1,10 @@
 
-body:not([style="--side-nav-layer-depth-ratio:0;"]) {
+body[nav-open] {
   perspective: 1000px;
   perspective-origin: center;
 }
 
-body:not([style="--side-nav-layer-depth-ratio:0;"]) > :not([side-nav]) {
+body[nav-open] > :not(side-nav) {
   --side-nav-edge-offset:0;
   opacity: calc(1 - (var(--side-nav-layer-depth-ratio) * .5));
   overflow:hidden;
@@ -13,38 +13,38 @@ body:not([style="--side-nav-layer-depth-ratio:0;"]) > :not([side-nav]) {
   transform: translateY(var(--side-nav-edge-offset)) rotateY(calc(var(--side-nav-layer-depth-ratio) * -15deg)) scale(calc(1 - (var(--side-nav-layer-depth-ratio) * .25)));
 }
 
-body:not([style="--side-nav-layer-depth-ratio:0;"]) > :not([side-nav]) * {
+body[nav-open] > :not(side-nav) * {
   overflow:hidden;
   pointer-events:none;
   filter:blur(1px);
   transition: filter 0.25s ease-in-out;
 }
 
-body:not([style="--side-nav-layer-depth-ratio:0;"]) > [content] {
+body[nav-open] > [content] {
   border-radius:calc(var(--radius-4) * var(--side-nav-layer-depth-ratio));
 }
 
 
-body:not([style="--side-nav-layer-depth-ratio:0;"]) > :not([side-nav]):is(header) {
+body[nav-open] > :not(side-nav):is(header) {
   --side-nav-edge-offset: calc(var(--side-nav-layer-depth-ratio) * -200%);
   border-radius:0;
   opacity: calc(1 - (var(--side-nav-layer-depth-ratio) * 1));
 }
 
-body:not([style="--side-nav-layer-depth-ratio:0;"]) > :not([side-nav]):is(footer) {
+body[nav-open] > :not(side-nav):is(footer) {
   --side-nav-edge-offset: calc(var(--side-nav-layer-depth-ratio) * 200%);
   border-radius:0;
   opacity: calc(1 - (var(--side-nav-layer-depth-ratio) * 1));
 }
 
-body:not([style="--side-nav-layer-depth-ratio:0;"]) > [layer][style*="--bottom-drawer-layer-depth-ratio:0."] {
+body[nav-open] > [layer][style*="--bottom-drawer-layer-depth-ratio:0."] {
   --bottom-drawer-layer-depth-ratio:0!important;
 }
 
 
 
 
-body [side-nav] {
+body side-nav {
   display: flex;
   justify-content: flex-start;
   gap: 1rem;
@@ -57,11 +57,11 @@ body [side-nav] {
   scrollbar-width: none;
 }
 
-body [side-nav]::-webkit-scrollbar{
+body side-nav::-webkit-scrollbar{
   display: none;
 }
 
-body [side-nav] aside {
+body side-nav aside {
   display: flex;
   justify-content: flex-start;
   min-width:max(250px ,45vw);
@@ -75,17 +75,17 @@ body [side-nav] aside {
 }
 
 
-body [side-nav][open] aside {
+body side-nav[open] aside {
   background: rgba(0,0,0,0.5);
 }
 
-body [side-nav] [placeholder] {
+body side-nav [placeholder] {
   min-width: 100vw;
   min-height: 100%;
   pointer-events: none;
   scroll-snap-align: end;
 }
 
-body [side-nav][open] [placeholder] {
+body side-nav[open] [placeholder] {
   pointer-events: auto;
 }

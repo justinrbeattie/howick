@@ -144,7 +144,7 @@ class BottomDrawer extends HTMLElement {
 }
 customElements.define("bottom-drawer", BottomDrawer);
 
-class SideNav extends HTMLDivElement {
+class SideNav extends  HTMLElement {
   intersectionObserver;
   ratio = 0;
   aside = this.querySelector("aside");
@@ -188,9 +188,11 @@ class SideNav extends HTMLDivElement {
   _intersectionCallback = (entries, observer) => {
     entries.forEach((entry, i) => {
       if (entry.intersectionRatio > 0.25) {
+        document.body.setAttribute("nav-open", "");
         this.setAttribute("open", "");
         this.removeAttribute("closed", "");
       } else {
+        document.body.removeAttribute("nav-open", "");
         this.setAttribute("closed", "");
         this.removeAttribute("open", "");
       }
@@ -203,4 +205,4 @@ class SideNav extends HTMLDivElement {
     document.body.style.setProperty("--side-nav-layer-depth-ratio", this.ratio);
   }
 }
-customElements.define("side-nav", SideNav, { extends: "div" });
+customElements.define("side-nav", SideNav);
