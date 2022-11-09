@@ -1,6 +1,22 @@
 export const webComponentsInit = () => {
 
-    window.scrollY = 80;
+
+  let lastKnownScrollPosition = 0;
+  let ticking = false;
+  
+  document.addEventListener('scroll', (e) => {
+    lastKnownScrollPosition = window.scrollY;
+  
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        document.documentElement.style.setProperty('--scroll-position', lastKnownScrollPosition + 'px');
+        ticking = false;
+      });
+  
+      ticking = true;
+    }
+  });
+
 
   const documentHeight = () => {
     document.body.style.setProperty("--page-height", `${window.innerHeight}px`);
@@ -214,7 +230,6 @@ export const webComponentsInit = () => {
     };
 
     setStyles() {
-        window.scrollY = 80;
       document.body.style.setProperty(
         "--side-nav-layer-depth-ratio",
         this.ratio

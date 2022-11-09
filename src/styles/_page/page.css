@@ -14,32 +14,39 @@
 
   body {
     display: grid;
-    overflow: hidden;
+    overflow: visible;
     background-image: var(--gradient-1);
     width: var(--page-width);
-    height: var(--page-height);
     grid-template-columns: 1fr;
     grid-template-rows:
-      var(--top-nav-height) calc(
+      var(--top-nav-height) 
+      calc(
         var(--page-height) - var(--top-nav-height) - var(--bottom-nav-height)
       )
+      auto
       var(--bottom-nav-height);
     grid-template-areas:
       "header"
+      "dialog"
       "content"
       "footer";
     margin: 0;
-    margin-top:90px;
     position:relative;
   }
 
   body > [content] {
-    overflow-y:auto;
     grid-area: content;
     display:flex;
     flex-direction:column;
     perspective: 1000px;
     perspective-origin: top;
+    margin-top:       calc(
+      (var(--page-height) - var(--bottom-nav-height)) * -1
+    );
+  }
+
+  [is="bottom-drawer"] {
+    transform:translateY(var(--scroll-position));
   }
 
 

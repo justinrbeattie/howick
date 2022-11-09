@@ -27,7 +27,8 @@ export default component$(() => {
         <RouterHead />
         <script src="//unpkg.com/@ungap/custom-elements/es.js"></script>
       </head>
-      <body lang="en" style="--side-nav-layer-depth-ratio:0;">
+
+      <body lang="en" style="--side-nav-layer-depth-ratio:0;" onscroll="">
         <RouterOutlet />
         <ServiceWorkerRegister />
         <script src="./custom-elements.min.js"></script>

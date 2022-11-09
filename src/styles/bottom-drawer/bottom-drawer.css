@@ -54,7 +54,7 @@ body>[content]>* {
   width: 80vw;
   height: 100%;
   margin: auto;
-  grid-area: content;
+  grid-area: dialog;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,6 +64,7 @@ body>[content]>* {
   transition: margin-top 0.25s ease-in-out;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  pointer-events: none;
 }
 
 [is="bottom-drawer"]::-webkit-scrollbar{
