@@ -20,15 +20,15 @@
     grid-template-columns: 1fr;
     grid-template-rows:
       var(--top-nav-height) 
+      auto
       calc(
         var(--page-height) - var(--top-nav-height) - var(--bottom-nav-height)
       )
-      auto
       var(--bottom-nav-height);
     grid-template-areas:
       "header"
-      "dialog"
       "content"
+      "dialog"
       "footer";
     margin: 0;
     position:relative;
@@ -40,14 +40,11 @@
     flex-direction:column;
     perspective: 1000px;
     perspective-origin: top;
-    margin-top:       calc(
-      (var(--page-height) - var(--bottom-nav-height)) * -1
-    );
+    margin-bottom:      calc(
+      (var(--page-height) - var(--top-nav-height) - var(--bottom-nav-height)) * -1
+    )
   }
 
-  [is="bottom-drawer"] {
-    transform:translateY(var(--scroll-position));
-  }
 
 
   body > header {

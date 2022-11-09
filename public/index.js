@@ -1,23 +1,5 @@
 export const webComponentsInit = () => {
 
-
-  let lastKnownScrollPosition = 0;
-  let ticking = false;
-  
-  document.addEventListener('scroll', (e) => {
-    lastKnownScrollPosition = window.scrollY;
-  
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        document.documentElement.style.setProperty('--scroll-position', lastKnownScrollPosition + 'px');
-        ticking = false;
-      });
-  
-      ticking = true;
-    }
-  });
-
-
   const documentHeight = () => {
     document.body.style.setProperty("--page-height", `${window.innerHeight}px`);
   };

@@ -65,6 +65,8 @@ body>[content]>* {
   -ms-overflow-style: none;
   scrollbar-width: none;
   pointer-events: none;
+  position: sticky;
+  bottom: var(--bottom-nav-height);
 }
 
 [is="bottom-drawer"]::-webkit-scrollbar{
