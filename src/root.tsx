@@ -1,9 +1,10 @@
-import { component$, useStyles$ } from '@builder.io/qwik';
+import { component$, useClientEffect$, useStyles$ } from '@builder.io/qwik';
 import { QwikCity, RouterOutlet, ServiceWorkerRegister } from '@builder.io/qwik-city';
 import { QwikPartytown } from './components/partytown/partytown';
 import { RouterHead } from './components/router-head/router-head';
 
 import globalStyles from './global.css?inline';
+import {webComponentsInit} from '../public/index.js';
 
 export default component$(() => {
   /**
@@ -13,7 +14,9 @@ export default component$(() => {
    * Dont remove the `<head>` and `<body>` elements.
    */
   useStyles$(globalStyles);
-
+  useClientEffect$(() => {
+    webComponentsInit();
+  }, {eagerness:'load'});
   return (
     <QwikCity>
       <head>
@@ -27,9 +30,11 @@ export default component$(() => {
       <body lang="en" style="--side-nav-layer-depth-ratio:0;">
         <RouterOutlet />
         <ServiceWorkerRegister />
-        <script src="./index.js"></script>
-        <script src="//unpkg.com/@ungap/custom-elements"></script>
+        <script src="./custom-elements.min.js"></script>
       </body>
     </QwikCity>
   );
 });
+
+
+
