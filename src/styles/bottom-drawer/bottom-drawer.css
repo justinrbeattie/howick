@@ -81,7 +81,7 @@ body>[content]>* {
   --bottom-drawer-z-index: var(--layer-2);
 }  
 
-
+/* 
 [is="bottom-drawer"][open]:has(~[is="bottom-drawer"][open]~[is="bottom-drawer"][open]) {
   --bottom-drawer-offset: calc(var(--bottom-drawer-header-height) * -2);
   --bottom-drawer-z-index: var(--layer-1);
@@ -91,7 +91,7 @@ body>[content]>* {
   --bottom-drawer-offset: calc(var(--bottom-drawer-header-height) * -1);
   --bottom-drawer-z-index: var(--layer-2);
 }
-
+ */
 
 /* Drawer Placeholder */
 
