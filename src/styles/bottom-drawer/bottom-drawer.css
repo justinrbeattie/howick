@@ -73,8 +73,9 @@ body>[content]>* {
   display: none;
 }
 
-[is="bottom-drawer"]:has([content]:hover) {
+[is="bottom-drawer"][touched] {
   pointer-events: auto;
+  background:red;
 }
 
 /* Bottom Drawer offset  */
