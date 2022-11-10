@@ -19,7 +19,7 @@ export const webComponentsInit = () => {
       }
     };
 
-    req = window.requestAnimationFrame(() => {
+    const req = window.requestAnimationFrame(() => {
       step(duration, Date.now(), req, callback);
     });
   };
@@ -74,8 +74,9 @@ export const webComponentsInit = () => {
         this.removeAttribute("open", "");
         this.setAttribute("inert", "");
       }
-
-      window.setDeferral(() => this.style.setProperty("display", "none"), 250);
+      window.setDeferral(() => {
+        this.style.setProperty("display", "none")
+      }, 400);
     }
 
     toggleDrawerVisibility() {
@@ -102,8 +103,8 @@ export const webComponentsInit = () => {
       }
     }
 
-    _intersectionCallback = (entries, observer) => {
-      entries.forEach((entry, i) => {
+    _intersectionCallback = (entries) => {
+      entries.forEach((entry) => {
         if (entry.intersectionRatio > 0.25) {
           this.setAttribute("expanded", "");
           this.removeAttribute("collapsed", "");
@@ -126,6 +127,12 @@ export const webComponentsInit = () => {
           "--bottom-drawer-layer-depth-ratio",
           totalRatio
         );
+
+        this.drawerLayers[i].style.setProperty(
+          "--bottom-drawer-intersection-ratio",
+          totalRatio
+        );
+
         if (totalRatio >= 1) {
           this.setInertState(this.drawerLayers[i - 1]);
         } else {

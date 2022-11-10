@@ -22,7 +22,7 @@ export default component$(() => {
 
       <dialog open layer="1" is="bottom-drawer">
         <div inert placeholder></div>
-        <div content onmouseover="this.parentElement.setAttribute('touched','')" onmouseout="this.parentElement.removeAttribute('touched','')">
+        <div content >
           <header>
             <div>
               <span>One</span>
@@ -43,7 +43,7 @@ export default component$(() => {
 
       <dialog open layer="2" is="bottom-drawer">
         <div inert placeholder></div>
-        <div content onmouseover="this.parentElement.setAttribute('touched','')" onmouseout="this.parentElement.removeAttribute('touched','')">
+        <div content >
           <header>
             <div>
               <span>Two</span>
@@ -64,7 +64,7 @@ export default component$(() => {
 
       <dialog open layer="3" is="bottom-drawer">
         <div inert placeholder></div>
-        <div content onmouseover="this.parentElement.setAttribute('touched','')" onmouseout="this.parentElement.removeAttribute('touched','')">
+        <div content >
           <header>
             <div>
               <span>Three</span>

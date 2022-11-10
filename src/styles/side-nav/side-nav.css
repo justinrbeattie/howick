@@ -10,7 +10,7 @@ body[nav-open] > :not(side-nav) {
   overflow:hidden;
   pointer-events:none;
   transform-origin:center center;
-  transform: translateY(var(--side-nav-edge-offset)) rotateY(calc(var(--side-nav-layer-depth-ratio) * -15deg)) scale(calc(1 - (var(--side-nav-layer-depth-ratio) * .25)));
+  transform: translateY(var(--side-nav-edge-offset)) rotateY(calc(var(--side-nav-layer-depth-ratio) * -5deg)) scale(calc(1 - (var(--side-nav-layer-depth-ratio) * .1)));
 }
 
 body[nav-open] > :not(side-nav) * {
