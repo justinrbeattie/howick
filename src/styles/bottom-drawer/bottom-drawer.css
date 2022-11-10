@@ -73,6 +73,10 @@ body>[content]>* {
   display: none;
 }
 
+[is="bottom-drawer"]:has([content]:hover) {
+  pointer-events: auto;
+}
+
 /* Bottom Drawer offset  */
 
 [is="bottom-drawer"][open]:nth-of-type(1) {
