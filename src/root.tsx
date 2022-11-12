@@ -4,7 +4,7 @@ import { QwikPartytown } from './components/partytown/partytown';
 import { RouterHead } from './components/router-head/router-head';
 
 import globalStyles from './global.css?inline';
-import {webComponentsInit} from '../public/index.js';
+import {webComponentsInit} from './index.js';
 
 export default component$(() => {
   /**
