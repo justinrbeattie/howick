@@ -8,7 +8,7 @@ export default component$(() => {
         Loading...
       </builder-component>
 
-      <builder-component model="section" api-key="f5a098163c3741e19503f02a69360619">
+      <builder-component model="global-symbols" api-key="f5a098163c3741e19503f02a69360619">
       </builder-component>
 
     </>
