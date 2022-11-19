@@ -20,9 +20,9 @@ export default component$(() => {
         <footer>aa</footer>
       </div>
 
-      <dialog open layer="1" is="bottom-drawer" ontouchstart="this.style.pointerEvents = 'auto'" ontouchend="this.style.pointerEvents = 'none'">
+      <dialog open layer="1" is="bottom-drawer">
         <div inert placeholder></div>
-        <div content >
+        <div content  ontouchstart="this.parentElement.style.pointerEvents = 'auto'" ontouchend="this.parentElement.style.pointerEvents = 'none'">
           <header>
             <div>
               <span>One</span>
@@ -41,9 +41,9 @@ export default component$(() => {
         </div>
       </dialog>
 
-      <dialog open layer="2" is="bottom-drawer"  ontouchstart="this.style.pointerEvents = 'auto'" ontouchend="this.style.pointerEvents = 'none'">
+      <dialog open layer="2" is="bottom-drawer">
         <div inert placeholder></div>
-        <div content >
+        <div content  ontouchstart="this.parentElement.style.pointerEvents = 'auto'" ontouchend="this.parentElement.style.pointerEvents = 'none'">
           <header>
             <div>
               <span>Two</span>
@@ -62,9 +62,9 @@ export default component$(() => {
         </div>
       </dialog>
 
-      <dialog open layer="3" is="bottom-drawer"  ontouchstart="this.style.pointerEvents = 'auto'" ontouchend="this.style.pointerEvents = 'none'">
+      <dialog open layer="3" is="bottom-drawer">
         <div inert placeholder></div>
-        <div content >
+        <div content  ontouchstart="this.parentElement.style.pointerEvents = 'auto'" ontouchend="this.parentElement.style.pointerEvents = 'none'">
           <header>
             <div>
               <span>Three</span>
