@@ -63,6 +63,7 @@ body>[content]>* {
   transition: margin-top 0.25s ease-in-out;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  pointer-events: none;
 }
 
 [is="bottom-drawer"]::-webkit-scrollbar {

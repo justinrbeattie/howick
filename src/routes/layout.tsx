@@ -20,7 +20,7 @@ export default component$(() => {
         <footer>aa</footer>
       </div>
 
-      <dialog open layer="1" is="bottom-drawer">
+      <dialog open layer="1" is="bottom-drawer" ontouchstart="this.style.pointerEvents = 'auto'" ontouchend="this.style.pointerEvents = 'none'">
         <div inert placeholder></div>
         <div content >
           <header>
@@ -41,7 +41,7 @@ export default component$(() => {
         </div>
       </dialog>
 
-      <dialog open layer="2" is="bottom-drawer">
+      <dialog open layer="2" is="bottom-drawer"  ontouchstart="this.style.pointerEvents = 'auto'" ontouchend="this.style.pointerEvents = 'none'">
         <div inert placeholder></div>
         <div content >
           <header>
@@ -62,7 +62,7 @@ export default component$(() => {
         </div>
       </dialog>
 
-      <dialog open layer="3" is="bottom-drawer">
+      <dialog open layer="3" is="bottom-drawer"  ontouchstart="this.style.pointerEvents = 'auto'" ontouchend="this.style.pointerEvents = 'none'">
         <div inert placeholder></div>
         <div content >
           <header>
