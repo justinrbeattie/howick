@@ -64,7 +64,7 @@ export default component$(() => {
 
       <dialog open layer="3" is="bottom-drawer">
         <div inert placeholder></div>
-        <div content  ontouchstart="this.parentElement.style.pointerEvents = 'auto'" ontouchend="this.parentElement.style.pointerEvents = 'none'">
+        <div content  ontouchstart="this.parentElement.style.background = 'red'" ontouchend="this.parentElement.style.background = 'green'">
           <header>
             <div>
               <span>Three</span>
