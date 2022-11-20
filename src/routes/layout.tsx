@@ -43,7 +43,7 @@ export default component$(() => {
 
       <dialog open layer="2" is="bottom-drawer">
         <div inert placeholder></div>
-        <div content  ontouchstart="this.parentElement.style.pointerEvents = 'auto'; this.firstElementChild.style.background = 'blue'" ontouchend="this.parentElement.style.pointerEvents = 'none'; this.firstElementChild.style.background = 'green'">
+        <div content  ontouchstart="this.parentElement.style.pointerEvents = 'auto'; this.firstElementChild.style.background = 'blue'" >
           <header>
             <div>
               <span>Two</span>
