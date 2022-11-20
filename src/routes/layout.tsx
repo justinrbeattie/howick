@@ -43,7 +43,7 @@ export default component$(() => {
 
       <dialog open layer="2" is="bottom-drawer">
         <div inert placeholder></div>
-        <div content  ontouchstart="this.parentElement.style.pointerEvents = 'auto'" ontouchend="this.parentElement.style.pointerEvents = 'none'">
+        <div content  ontouchstart="this.firstElementChild.style.background = 'red'" ontouchend="this.firstElementChild.style.background = 'green'">
           <header>
             <div>
               <span>Two</span>
@@ -64,7 +64,7 @@ export default component$(() => {
 
       <dialog open layer="3" is="bottom-drawer">
         <div inert placeholder></div>
-        <div content  ontouchstart="this.parentElement.style.background = 'red'" ontouchend="this.parentElement.style.background = 'green'">
+        <div content  onmouseenter="this.firstElementChild.style.background = 'red'" onmouseleave="this.firstElementChild.style.background = 'green'">
           <header>
             <div>
               <span>Three</span>
